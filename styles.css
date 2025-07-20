@@ -1,0 +1,110 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.cards {
+    max-width: 100%;
+    padding: 2em;
+    text-align: center;
+    background-color: rgba(0, 0, 17, 0.959);
+    border-radius: 10px;
+}
+
+.cards img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.portfolio img {
+    width: 550px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.portfolio .information {
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    justify-content: space-between;
+}
+
+.portfolio .information button {
+    margin: 20px 0;
+    width: 100%;
+    background: #613954;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.italic-word {
+    font-style: italic;
+}
+
+/*==================CONTACT ==US==================================*/
+
+.info li {
+    display: flex;
+    align-items: start;
+    line-height: 2rem;
+    font-weight: 400;
+}
+.info li i {
+    margin-top: 5px;
+    font-size: 24px;
+    color: #069;
+    margin-right: 10px;
+}
+
+.info li span {
+    padding-left: 15px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+.info li a {
+    color: white;
+    text-decoration: none;
+}
+
+/*=======================================================*/
+
+@media screen and (max-width: 1024px) {
+    .img-grid {
+        --num-cols: 4;
+        --row-height: 100px;
+        --gap: 10px;
+        box-sizing: border-box;
+            padding: var(--gap);
+        
+            display: grid;
+            grid-template-columns: repeat(var(--num-cols), 1fr);
+            grid-auto-rows: var(--row-height);
+            gap: var(--gap);
+    }
+    .image-grid > img {
+        width: 100%;
+        height: 100%;
+    }
+    .hero-text {
+        margin-left: 20px;
+        margin-top: 100px;
+        max-width: 90%;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text h4 {
+        font-size: 1.5rem;
+    }
+}
